@@ -4,7 +4,8 @@ import 'primeicons/primeicons.css'
 import {Button} from "primereact/button";
 import { Tooltip } from 'primereact/tooltip';
 import { FiSettings } from 'react-icons/fi';
-
+import {Navbar, Footer, Sidebar, ThemeSettings} from './components/index'
+import { Doughnut, Line, Pie, Login, MainPage, Profile, Register } from './pages/index';
 
 import './App.css'
 
@@ -27,11 +28,11 @@ const App = () =>{
                     {activeMenu ? (
                         <div className="w-75 fixed sidebar
                         dark: bg-white">
-                            ceva
+                            <Sidebar />
                         </div>
                     ):(
                         <div className="w-0 dark:bg-secondary-dark-bg">
-                            altceva
+                            <Sidebar />
                         </div>
                     )}
 
@@ -40,18 +41,18 @@ const App = () =>{
                          ${activeMenu ? 'md:ml-72' : 'flex-2'}`
                     }>
                         <div className="fixed md-static bg-main-bg dark:bg-main-dark-bg navbar w-full">
-                            nav
+                            <Navbar />
                         </div>
                     </div>
 
                     <div>
                         <Routes>
                             {/*Login*/}
-                            <Route path="/" element="Login" />
-                            <Route path="/Login" element="Login" />
-                            <Route path="/Register" element="Register" />
+                            <Route path="/" element={<Login/>} />
+                            <Route path="/Login" element={<Login/>} />
+                            <Route path="/Register" element={<Register/>}/>
                             {/*Main*/}
-                            <Route path="/Main" element="Main" />
+                            <Route path="/MainPage" element={<MainPage/>}/>
                         </Routes>
                     </div>
 

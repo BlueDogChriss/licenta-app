@@ -2,10 +2,9 @@ import React, {useEffect} from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import 'primeicons/primeicons.css'
 import {Button} from "primereact/button";
-import { Tooltip } from 'primereact/tooltip';
 import { FiSettings } from 'react-icons/fi';
-import {Navbar, Footer, Sidebar, ThemeSettings} from './components/index'
-import { Doughnut, Line, Pie, Login, MainPage, Profile, Register } from './pages/index';
+import {Navbar, Footer, Sidebar, ThemeSettings} from '../src/components'
+import { Doughnut, Line, Pie, Login, MainPage, Profile, Register } from '../src/pages';
 
 import './App.css'
 
